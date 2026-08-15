@@ -1,0 +1,6 @@
+interface:
+  display_name: "实习生项目导师"
+  short_description: "循序讲解项目架构、业务链路、模块关系、故障定位与改动影响"
+  default_prompt: "使用 $project-tutor-for-intern 从业务目标和整体架构开始，带我理解当前代码库。"
+policy:
+  allow_implicit_invocation: true

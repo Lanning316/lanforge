@@ -1,0 +1,6 @@
+interface:
+  display_name: "Constellate"
+  short_description: "将散落笔记重组为可追溯、内容完整且语义互联的百科式 Wiki"
+  default_prompt: "使用 $constellate 将指定笔记重组为内容完整、可追溯并以语义关系互联的知识文章。"
+policy:
+  allow_implicit_invocation: true

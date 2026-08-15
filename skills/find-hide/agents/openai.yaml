@@ -2,12 +2,5 @@ interface:
   display_name: Find Hide
   short_description: 揭示表面问题背后的关键瓶颈，并给出因果分析和可验证的下一步行动
   default_prompt: 使用 $find-hide 找出我当前问题背后更关键但尚未提出的问题。
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
 policy:
-  products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
   allow_implicit_invocation: true

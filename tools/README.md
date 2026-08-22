@@ -6,10 +6,6 @@
 
 这里记录实际使用过、研究过，或者设计思路值得学习的 AI / Agent / Coding 工具。
 
-重点不是简单整理 Feature List，而是尝试回答：
-
-> **这个东西到底解决什么问题？它为什么这样设计？有哪些东西值得借鉴？**
-
 ## 🛠️ Tools 索引
 
 ### [`YOLO-obsidain.md`](./YOLO-obsidain.md)

@@ -41,15 +41,10 @@ lanforge/
 │   └── writing-tutorials/
 │
 ├── prompt/               # Prompt & Prompt Engineering
-│   └── README.md         # Prompt 索引与使用方式
 │
 ├── tools/                # AI / Agent 工具研究与实践笔记
-│   └── README.md         # Tools 笔记索引与阅读方式
 │
-├── other/                # AGENTS.md、工程原则等
-│   └── README.md         # 其他资料索引
-│
-└── README.md             # 仓库总览
+└──other/                # AGENTS.md、工程原则等
 ```
 
 ## 🌱 About
@@ -62,4 +57,4 @@ Lanforge 不是一个追求收集数量的 Prompt / Skill 大全。
 
 很多内容最初可能只是一个简单 Prompt、一条工程经验或者一次工具尝试；如果它在实际使用中不断被验证，就会逐渐被整理、抽象和完善。因此这个仓库本身也会持续演化。
 
-部分内容来自对公开项目、文章和社区实践的学习、翻译或二次整理，具体来源与上下文以对应文件中的说明为准。
+部分内容来自对公开项目、文章和社区实践的学习、翻译或二次整理，并非原创，具体来源与上下文以对应文件中的说明为准。

@@ -1,6 +1,5 @@
 # <CHAPTER_TITLE>
 
-> 源码基准：<SOURCE_BASELINE>
 > 本章目标：<LEARNING_GOAL>
 
 ## 场景与类比
@@ -30,6 +29,12 @@
 ## 实现观察或设计决策
 
 <OBSERVATION_DECISION_EVIDENCE_AND_TRADEOFF>
+
+## 演进与设计意图（仅 Git 历史模式）
+
+普通章节删除本节。启用时，用少量关键提交说明最早问题、主要转折、当前设计和修改护栏；每个节点包含短提交哈希、日期、主题、相关路径和证据等级。
+
+<HISTORY_MILESTONES_AND_GUARDRAILS>
 
 ## 必要背景（可选）
 

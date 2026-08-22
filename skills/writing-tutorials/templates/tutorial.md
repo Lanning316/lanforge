@@ -1,8 +1,9 @@
 # <TOPIC> 深度讲解
 
-> 源码基准：<SOURCE_BASELINE>
 > 目标读者：<AUDIENCE>
 > 范围：<SCOPE>
+
+<!-- 只有版本差异影响内容或项目规范要求时，才补充版本上下文。 -->
 
 ## 阅读路线
 
@@ -71,6 +72,20 @@ flowchart LR
 > 📦 **额外知识：<OPTIONAL_BACKGROUND>**
 >
 > <ONLY_KEEP_IF_NEEDED>
+
+## 演进与设计意图（仅 Git 历史模式）
+
+普通教程删除本节。启用历史模式时，只保留能解释当前结构的关键节点。
+
+| 时间与提交 | 发生了什么 | 原因与证据等级 | 如何影响当前设计 |
+| --- | --- | --- | --- |
+| <DATE_AND_SHORT_COMMIT> | <OBSERVED_CHANGE> | <STATED_INFERRED_OR_UNKNOWN> | <CURRENT_CODE_OR_TEST> |
+
+### 修改护栏
+
+- 不要轻易破坏：<HISTORICAL_EVIDENCE_AND_CURRENT_GUARD>
+- 可以安全调整：<SAFE_CHANGE_WITH_REASON>
+- 候选风险或待确认：<RISK_OR_UNKNOWN>
 
 ## 常见坑、失败路径与扩展点
 

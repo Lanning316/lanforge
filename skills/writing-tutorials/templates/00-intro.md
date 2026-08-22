@@ -1,6 +1,5 @@
 # 开篇：什么是 <TOPIC>，为什么需要它
 
-> 源码基准：<SOURCE_BASELINE>
 > 本章目标：<LEARNING_GOAL>
 
 ## 一个具体场景

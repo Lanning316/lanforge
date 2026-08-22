@@ -139,8 +139,6 @@ def validate(
         parsed = urlparse(target)
         if parsed.scheme in {"http", "https", "mailto"}:
             if parsed.scheme in {"http", "https"}:
-                if re.search(r"/(?:blob|-/blob)/(?:main|master)/", target):
-                    warnings.append(f"远程链接锚定可变分支：{target}")
                 if Path(parsed.path).suffix.lower() in CODE_SUFFIXES:
                     source_links += 1
             continue
@@ -188,7 +186,7 @@ def validate(
         warnings.append(f"非正文文件包含 {takeaway_count} 个“一句话记住”")
 
     if source_links + source_locations == 0 and effective_mode in {"single", "chapter"}:
-        errors.append("正文没有可识别的源码链接或 path:line 定位")
+        warnings.append("没有识别到常见源码链接或 path:line 定位，请人工确认核心结论可追溯")
 
     headings = [
         match.group(1).strip()
@@ -199,8 +197,6 @@ def validate(
             warnings.append("没有识别到主流程或一步步讲解标题")
         if not any("源码" in heading or "代码" in heading for heading in headings):
             warnings.append("没有识别到源码或代码索引标题")
-        if "源码基准" not in content:
-            warnings.append("没有记录源码基准 commit 或工作区快照")
 
     return errors, warnings
 
@@ -209,7 +205,7 @@ def run_self_test() -> int:
     root = Path.cwd().resolve()
     virtual_doc = root / "tutorial-validator-self-test.md"
     valid_text = (
-        "# Demo\n\n> 源码基准：当前工作区快照\n\n"
+        "# Demo\n\n"
         "## 一步步走主流程\n\n"
         "源码见 [validate_tutorial.py](writing-tutorials/scripts/validate_tutorial.py) "
         "中的 `validate`（`writing-tutorials/scripts/validate_tutorial.py:104-207`）。\n\n"
@@ -221,6 +217,19 @@ def run_self_test() -> int:
         print("SELF-TEST FAIL: 合法样例被拒绝")
         for item in valid_errors:
             print(f"  - {item}")
+        return 1
+
+    native_locator_text = (
+        "# Demo\n\n## 一步步走主流程\n\n"
+        "入口由项目的符号索引 `demo.entry` 定位。\n\n"
+        "## 源码索引\n\n- `demo.entry`\n\n"
+        "> 💡 **一句话记住**：项目原生标识也可以承担源码定位。\n"
+    )
+    native_errors, native_warnings = validate(
+        virtual_doc, root, "single", text=native_locator_text
+    )
+    if native_errors or not native_warnings:
+        print("SELF-TEST FAIL: 项目原生定位应只触发人工确认提醒")
         return 1
 
     invalid_text = "# <TOPIC>\n\n[file](file:///Users/name/project/file.py)\n"

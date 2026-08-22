@@ -1,6 +1,5 @@
 # 全景：<TOPIC> 的组成与边界
 
-> 源码基准：<SOURCE_BASELINE>
 > 本章目标：<LEARNING_GOAL>
 
 ## 在系统中的位置

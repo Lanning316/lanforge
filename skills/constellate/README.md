@@ -1,5 +1,7 @@
 # Constellate
 
+[返回 Skills 索引](../README.md) · [返回仓库总览](../../README.md)
+
 Constellate 是一个面向个人 Markdown / Obsidian 笔记库的 Codex Skill。它把散落的原始笔记重组为**内容完整、来源可追溯、语义互联**的百科式 Wiki，并支持持续查询、检查和演化。
 
 它不是简单的笔记分类器或自动摘要器。Constellate 采用“文章优先”的方法：先让每个页面能够独立回答一个知识问题，再用有类型的语义关系把页面连接成知识图谱。
